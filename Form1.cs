@@ -28,6 +28,7 @@ namespace VideoPlayer
                 our_video.Open(openFileDialog1.FileName);
                 our_video.Play();
                 our_video.Owner = panel1;
+                this.Text = openFileDialog1.FileName;
                 
             }
         }

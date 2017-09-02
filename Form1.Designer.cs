@@ -123,7 +123,7 @@
             this.Controls.Add(this.panel2);
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "VideoPlayer";
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Volume)).EndInit();
             this.panel2.ResumeLayout(false);
