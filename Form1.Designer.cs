@@ -69,6 +69,7 @@
             this.Play.TabIndex = 2;
             this.Play.Text = "Play";
             this.Play.UseVisualStyleBackColor = false;
+            this.Play.Click += new System.EventHandler(this.Play_Click);
             // 
             // Pause
             // 
@@ -81,6 +82,7 @@
             this.Pause.TabIndex = 3;
             this.Pause.Text = "Pause";
             this.Pause.UseVisualStyleBackColor = false;
+            this.Pause.Click += new System.EventHandler(this.Pause_Click);
             // 
             // trackBar1
             // 

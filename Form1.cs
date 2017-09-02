@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using Microsoft.DirectX;
 using Microsoft.DirectX.AudioVideoPlayback;
@@ -27,7 +27,19 @@ namespace VideoPlayer
                 our_video = new Video(openFileDialog1.FileName);
                 our_video.Open(openFileDialog1.FileName);
                 our_video.Play();
+                our_video.Owner = panel1;
+                
             }
+        }
+
+        private void Play_Click(object sender, EventArgs e)
+        {
+            if (!our_video.Playing) our_video.Play();
+        }
+
+        private void Pause_Click(object sender, EventArgs e)
+        {
+            if (our_video.Playing) our_video.Pause();
         }
     }
 }
