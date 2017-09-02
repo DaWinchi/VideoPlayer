@@ -32,9 +32,9 @@
             this.Open = new System.Windows.Forms.Button();
             this.Play = new System.Windows.Forms.Button();
             this.Pause = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.Volume = new System.Windows.Forms.TrackBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Volume)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,13 +84,14 @@
             this.Pause.UseVisualStyleBackColor = false;
             this.Pause.Click += new System.EventHandler(this.Pause_Click);
             // 
-            // trackBar1
+            // Volume
             // 
-            this.trackBar1.BackColor = System.Drawing.Color.Black;
-            this.trackBar1.Location = new System.Drawing.Point(853, 595);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(307, 45);
-            this.trackBar1.TabIndex = 4;
+            this.Volume.BackColor = System.Drawing.Color.Black;
+            this.Volume.Location = new System.Drawing.Point(853, 595);
+            this.Volume.Name = "Volume";
+            this.Volume.Size = new System.Drawing.Size(307, 45);
+            this.Volume.TabIndex = 4;
+            this.Volume.Scroll += new System.EventHandler(this.Volume_Scroll);
             // 
             // openFileDialog1
             // 
@@ -102,14 +103,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::VideoPlayer.Properties.Resources._1;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.Volume);
             this.Controls.Add(this.Pause);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.Open);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.Volume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +124,7 @@
         private System.Windows.Forms.Button Open;
         private System.Windows.Forms.Button Play;
         private System.Windows.Forms.Button Pause;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar Volume;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

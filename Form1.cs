@@ -41,5 +41,19 @@ namespace VideoPlayer
         {
             if (our_video.Playing) our_video.Pause();
         }
+
+        private void Volume_Scroll(object sender, EventArgs e)
+        {
+            Volume.Minimum = -10000;
+            Volume.Maximum = 0;
+            Volume.TickFrequency = 400;
+            our_video.Audio.Volume = Volume.Value;
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Space)
+            { if (our_video.Playing) our_video.Pause(); else our_video.Play(); }
+        }
     }
 }
