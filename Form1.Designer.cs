@@ -33,6 +33,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::VideoPlayer.Properties.Resources._1;
             this.panel1.Location = new System.Drawing.Point(182, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(954, 419);
